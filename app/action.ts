@@ -17,8 +17,8 @@ export async function requestQuote(formData: FormData) {
   }
 
   const { error } = await resend.emails.send({
-    from: "Mack Land Works <quotes@yourdomain.com>",
-    to: ["your@email.com"],
+    from: "Mack Land Works <joe.mack@quote.macklandmgnt.com>",
+    to: ["joe.mack@macklandmgmt.com"],
     subject: `New quote request from ${fullName}`,
     replyTo: email || undefined,
     text: `
