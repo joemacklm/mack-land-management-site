@@ -270,56 +270,68 @@ export default function Home() {
       </div>
     </div>
 
-    <form action={requestQuote} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-4">
-      
-      <input
-        type="text"
-        placeholder="Full Name"
-        className="w-full rounded-lg border px-4 py-3"
-        required
-      />
+<form
+  action={requestQuote}
+  className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-4"
+>
+  <input
+    name="fullName"
+    type="text"
+    placeholder="Full Name"
+    className="w-full rounded-lg border px-4 py-3"
+    required
+  />
 
-      <input
-        type="tel"
-        placeholder="Phone Number"
-        className="w-full rounded-lg border px-4 py-3"
-        required
-      />
+  <input
+    name="phone"
+    type="tel"
+    placeholder="Phone Number"
+    className="w-full rounded-lg border px-4 py-3"
+    required
+  />
 
-      <input
-        type="email"
-        placeholder="Email Address"
-        className="w-full rounded-lg border px-4 py-3"
-      />
+  <input
+    name="email"
+    type="email"
+    placeholder="Email Address"
+    className="w-full rounded-lg border px-4 py-3"
+  />
 
-      <input
-        type="text"
-        placeholder="Property Location / Town"
-        className="w-full rounded-lg border px-4 py-3"
-      />
+  <input
+    name="location"
+    type="text"
+    placeholder="Property Location / Town"
+    className="w-full rounded-lg border px-4 py-3"
+  />
 
-      <select className="w-full rounded-lg border px-4 py-3">
-        <option>Select Service</option>
-        <option>Land Clearing</option>
-        <option>Stump Grinding</option>
-        <option>Brush Cutting</option>
-        <option>Other</option>
-      </select>
+  <select
+    name="service"
+    className="w-full rounded-lg border px-4 py-3"
+    defaultValue=""
+  >
+    <option value="" disabled>
+      Select Service
+    </option>
+    <option>Land Clearing</option>
+    <option>Stump Grinding</option>
+    <option>Brush Cutting</option>
+    <option>Other</option>
+  </select>
 
-      <textarea
-        placeholder="Tell us about the job (acreage, number of stumps, access, timeline, etc)"
-        rows={4}
-        className="w-full rounded-lg border px-4 py-3"
-      />
+  <textarea
+    name="details"
+    placeholder="Tell us about the job"
+    rows={4}
+    className="w-full rounded-lg border px-4 py-3"
+  />
 
-      <button
-        type="submit"
-        className="w-full rounded-xl bg-black py-3 font-semibold text-white hover:opacity-90"
-      >
-        Request Quote
-      </button>
-
-    </form>
+  <button
+    type="submit"
+    className="w-full rounded-xl bg-black py-3 font-semibold text-white hover:opacity-90"
+  >
+    Request Quote
+  </button>
+</form>
 
   </div>
 </section>
