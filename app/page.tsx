@@ -1,3 +1,5 @@
+import { requestQuote } from "./actions";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-neutral-900">
@@ -269,7 +271,7 @@ export default function Home() {
       </div>
     </div>
 
-    <form className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-4">
+    <form action={requestQuote} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-4">
       
       <input
         type="text"
