@@ -263,8 +263,8 @@ export default function Home() {
       </p>
 
       <div className="mt-6 space-y-2 text-neutral-700">
-        <p><strong>Phone:</strong> (PUT YOUR REAL NUMBER)</p>
-        <p><strong>Email:</strong> (PUT YOUR REAL EMAIL)</p>
+        <p><strong>Phone:</strong> (856-364-2392)</p>
+        <p><strong>Email:</strong> (joe.mack@macklandmgmt.com)</p>
         <p><strong>Service Area:</strong> New Jersey</p>
       </div>
     </div>
