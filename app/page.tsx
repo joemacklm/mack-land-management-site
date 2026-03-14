@@ -1,6 +1,35 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-neutral-900">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <a href="#" className="text-lg font-bold tracking-tight text-white">
+            Mack Land Management
+          </a>
+
+          <nav className="hidden items-center gap-6 md:flex">
+            <a href="#services" className="text-sm text-white/80 hover:text-white">
+              Services
+            </a>
+            <a href="#gallery" className="text-sm text-white/80 hover:text-white">
+              Gallery
+            </a>
+            <a href="#why-us" className="text-sm text-white/80 hover:text-white">
+              Why Us
+            </a>
+            <a href="#contact" className="text-sm text-white/80 hover:text-white">
+              Contact
+            </a>
+            <a
+              href="tel:8563642392"
+              className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black transition hover:opacity-90"
+            >
+              Call Now
+            </a>
+          </nav>
+        </div>
+      </header>
+
       <section className="relative overflow-hidden bg-[linear-gradient(to_bottom,rgba(0,0,0,0.72),rgba(0,0,0,0.62)),url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/80">
@@ -102,7 +131,48 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-neutral-900 text-white">
+      <section id="gallery" className="bg-neutral-100">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
+              Gallery
+            </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              The kind of work we’re built for
+            </h2>
+            <p className="mt-4 text-lg text-neutral-600">
+              Add your own job photos here later. For now, this section gives
+              your homepage a stronger contractor-style layout.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="overflow-hidden rounded-2xl bg-neutral-300">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
+                alt="Heavy equipment on a work site"
+                className="h-72 w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl bg-neutral-300">
+              <img
+                src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1000&q=80"
+                alt="Open land and tree line"
+                className="h-72 w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl bg-neutral-300">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80"
+                alt="Outdoor property work area"
+                className="h-72 w-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-us" className="bg-neutral-900 text-white">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-2 md:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
@@ -165,7 +235,7 @@ export default function Home() {
                 Request a Quote
               </a>
               <a
-                href="tel:5555555555"
+                href="tel:8563642392"
                 className="rounded-xl border border-black px-6 py-3 font-semibold text-black transition hover:bg-white"
               >
                 Call Now
@@ -175,7 +245,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-6 pb-20">
+      <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
         <div className="grid gap-8 md:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
@@ -192,7 +262,7 @@ export default function Home() {
             <div className="space-y-4 text-neutral-700">
               <p>
                 <span className="font-semibold text-neutral-900">Phone:</span>{" "}
-                (856) 354-2392
+                (856) 364-2392
               </p>
               <p>
                 <span className="font-semibold text-neutral-900">Email:</span>{" "}
@@ -208,6 +278,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <a
+        href="tel:8563642392"
+        className="fixed bottom-5 right-5 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:opacity-90"
+      >
+        Call Now
+      </a>
     </main>
   );
 }
