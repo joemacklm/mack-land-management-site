@@ -246,38 +246,82 @@ export default function Home() {
       </section>
 
       <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
-              Contact
-            </p>
-            <h2 className="mt-3 text-3xl font-bold">Get a Quote</h2>
-            <p className="mt-4 max-w-xl text-neutral-600">
-              Reach out with your project details, location, and timeline. We’ll
-              follow up with the next steps.
-            </p>
-          </div>
+  <div className="grid gap-10 md:grid-cols-2">
+    
+    <div>
+      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
+        Request a Quote
+      </p>
 
-          <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-            <div className="space-y-4 text-neutral-700">
-              <p>
-                <span className="font-semibold text-neutral-900">Phone:</span>{" "}
-                (856) 364-2392
-              </p>
-              <p>
-                <span className="font-semibold text-neutral-900">Email:</span>{" "}
-                joe.mack@macklandmgmt.com
-              </p>
-              <p>
-                <span className="font-semibold text-neutral-900">
-                  Service Area:
-                </span>{" "}
-                New Jersey
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <h2 className="mt-3 text-3xl font-bold">
+        Tell us about your project
+      </h2>
+
+      <p className="mt-4 text-neutral-600 max-w-xl">
+        Fill out the form and we’ll reach out to discuss your property,
+        timeline, and pricing.
+      </p>
+
+      <div className="mt-6 space-y-2 text-neutral-700">
+        <p><strong>Phone:</strong> (PUT YOUR REAL NUMBER)</p>
+        <p><strong>Email:</strong> (PUT YOUR REAL EMAIL)</p>
+        <p><strong>Service Area:</strong> New Jersey</p>
+      </div>
+    </div>
+
+    <form className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm space-y-4">
+      
+      <input
+        type="text"
+        placeholder="Full Name"
+        className="w-full rounded-lg border px-4 py-3"
+        required
+      />
+
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        className="w-full rounded-lg border px-4 py-3"
+        required
+      />
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        className="w-full rounded-lg border px-4 py-3"
+      />
+
+      <input
+        type="text"
+        placeholder="Property Location / Town"
+        className="w-full rounded-lg border px-4 py-3"
+      />
+
+      <select className="w-full rounded-lg border px-4 py-3">
+        <option>Select Service</option>
+        <option>Land Clearing</option>
+        <option>Stump Grinding</option>
+        <option>Brush Cutting</option>
+        <option>Other</option>
+      </select>
+
+      <textarea
+        placeholder="Tell us about the job (acreage, number of stumps, access, timeline, etc)"
+        rows={4}
+        className="w-full rounded-lg border px-4 py-3"
+      />
+
+      <button
+        type="submit"
+        className="w-full rounded-xl bg-black py-3 font-semibold text-white hover:opacity-90"
+      >
+        Request Quote
+      </button>
+
+    </form>
+
+  </div>
+</section>
 
       <a
         href="tel:8563642392"
