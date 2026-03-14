@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function requestQuote(formData: FormData) {
+export async function requestQuote(formData: FormData): Promise<void> {
   const fullName = String(formData.get("fullName") || "").trim();
   const phone = String(formData.get("phone") || "").trim();
   const email = String(formData.get("email") || "").trim();
@@ -16,11 +16,15 @@ export async function requestQuote(formData: FormData) {
     throw new Error("Name and phone are required.");
   }
 
-  const { error } = await resend.emails.send({
-    from: "Mack Land Works <joe.mack@quote.macklandmgnt.com>",
+  if (!process.env.RESEND_API_KEY) {
+    throw new Error("Missing RESEND_API_KEY.");
+  }
+
+  const result = await resend.emails.send({
+    from: "Mack Land Works <quote.macklandmgmt.com>",
     to: ["joe.mack@macklandmgmt.com"],
-    subject: `New quote request from ${fullName}`,
     replyTo: email || undefined,
+    subject: `New quote request from ${fullName}`,
     text: `
 New Quote Request
 
@@ -35,7 +39,7 @@ ${details}
     `.trim(),
   });
 
-  if (error) {
-    throw new Error(error.message || "Failed to send email.");
+  if (result.error) {
+    throw new Error(result.error.message || "Failed to send email.");
   }
 }
