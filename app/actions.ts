@@ -2,9 +2,15 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function requestQuote(formData: FormData): Promise<void> {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("Missing RESEND_API_KEY");
+  }
+
+  const resend = new Resend(apiKey);
+
   const fullName = String(formData.get("fullName") || "").trim();
   const phone = String(formData.get("phone") || "").trim();
   const email = String(formData.get("email") || "").trim();
@@ -14,10 +20,6 @@ export async function requestQuote(formData: FormData): Promise<void> {
 
   if (!fullName || !phone) {
     throw new Error("Name and phone are required.");
-  }
-
-  if (!process.env.RESEND_API_KEY) {
-    throw new Error("Missing RESEND_API_KEY.");
   }
 
   const result = await resend.emails.send({
