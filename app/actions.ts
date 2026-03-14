@@ -1,5 +1,6 @@
-console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
 "use server";
+
+console.log("API KEY EXISTS:", !!process.env.RESEND_API_KEY);
 
 import { Resend } from "resend";
 
