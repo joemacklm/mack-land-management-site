@@ -25,7 +25,7 @@ Thank you.`
 )}`; 
 
 const smsLink = `sms:${phoneLink}?&body=${encodeURIComponent(
-  "Hi Mack Land Works, I’d like to request a quote. I’m sending photos of the job site. My name is:"
+  "Hi, I’d like to request a quote. I’m sending photos for refenece. My name is:"
 )}`;
   return (
     <main className="min-h-screen bg-white text-neutral-900">
@@ -219,36 +219,22 @@ const smsLink = `sms:${phoneLink}?&body=${encodeURIComponent(
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-neutral-500">
-                Ready to Start?
+                Benefits of land management  
               </p>
               <h2 className="mt-3 text-3xl font-bold md:text-4xl">
-                Let’s talk about your property.
+                Take back your property!
               </h2>
               <p className="mt-4 max-w-xl text-neutral-600">
-                From cleanup and reclaiming space to removing stumps and brush,
-                we’re ready to help you move your project forward.
+                Land management improves the safety, appearance, and usability of your 
+                property by controlling overgrowth, maintaining access, and preparing land 
+                for future projects.
               </p>
             </div>
 
             <div className="flex flex-wrap gap-4 md:justify-end">
-              <a
-                href={mailtoLink}
-                className="rounded-xl bg-black px-6 py-3 font-semibold text-white transition hover:opacity-90"
-              >
-                Email for a Quote
-              </a>
-              <a
-                href={`tel:${phoneLink}`}
-                className="rounded-xl border border-black px-6 py-3 font-semibold text-black transition hover:bg-white"
-              >
-                Call Now
-              </a>
-              <a
-  href={smsLink}
-  className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:opacity-90"
->
-  Text Photos for a Quote
-</a>
+              
+              
+              
             </div>
           </div>
         </div>
