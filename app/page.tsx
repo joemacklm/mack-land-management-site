@@ -24,6 +24,9 @@ Additional Details:
 Thank you.`
 )}`; 
 
+const smsLink = `sms:${phoneLink}?&body=${encodeURIComponent(
+  "Hi Mack Land Works, I’d like to request a quote. I’m sending photos of the job site. My name is:"
+)}`;
   return (
     <main className="min-h-screen bg-white text-neutral-900">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/90 backdrop-blur">
@@ -48,6 +51,12 @@ Thank you.`
             >
               Call Now
             </a>
+            <a
+  href={smsLink}
+  className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:opacity-90"
+>
+  Text Photos for a Quote
+</a>
           </nav>
         </div>
       </header>
@@ -87,6 +96,12 @@ Thank you.`
             >
               Email for a Quote
             </a>
+            <a
+  href={smsLink}
+  className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:opacity-90"
+>
+  Text Photos for a Quote
+</a>
           </div>
         </div>
       </section>
@@ -228,6 +243,12 @@ Thank you.`
               >
                 Call Now
               </a>
+              <a
+  href={smsLink}
+  className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:opacity-90"
+>
+  Text Photos for a Quote
+</a>
             </div>
           </div>
         </div>
@@ -278,6 +299,12 @@ Thank you.`
               >
                 Call Now
               </a>
+              <a
+  href={smsLink}
+  className="rounded-xl bg-green-700 px-6 py-3 font-semibold text-white transition hover:opacity-90"
+>
+  Text Photos for a Quote
+</a>
             </div>
           </div>
         </div>
