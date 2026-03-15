@@ -3,11 +3,26 @@ export default function Home() {
   const phoneDisplay = "(856)-364-2392";
   const phoneLink = "8563642392";
 
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-    "Quote Request"
-  )}&body=${encodeURIComponent(
-    "Name:\nPhone:\nEmail:\nProperty Location:\nService Needed:\nProject Details:"
-  )}`;
+ const mailtoLink = `mailto:joe.mack@macklandmgmt.com?subject=${encodeURIComponent(
+  "Quote Request – Mack Land Works"
+)}&body=${encodeURIComponent(
+`Hello Mack Land Works,
+
+I would like to request a quote for land services.
+
+Name:
+Phone Number:
+Email Address:
+Property Address / Town:
+Type of Service Needed:
+Approximate Size of Area:
+Number of Stumps (if applicable):
+Preferred Timeline:
+
+Additional Details:
+
+Thank you.`
+)}`; 
 
   return (
     <main className="min-h-screen bg-white text-neutral-900">
