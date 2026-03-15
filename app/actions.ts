@@ -33,8 +33,8 @@ export async function requestQuote(formData: FormData): Promise<void> {
   }
 
   const result = await resend.emails.send({
-    from: "Mack Land Works <quote.macklandmgmt.com>",
-    to: ["joe.mack@macklandmgmt.com"],
+    from: "onboarding@resend.dev",
+to: ["joe.mack@macklandmgmt.com"],
     replyTo: email || undefined,
     subject: `New quote request from ${fullName}`,
     text: `
